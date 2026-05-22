@@ -49,3 +49,77 @@ Navigation: Expo Router
 Language: TypeScript
 
 State Management: React Context API
+
+## 🎓 Learning Outcomes
+
+This project taught me:
+- **Dual-interface architecture**: Managing separate user flows (Client vs Professional) in a single codebase
+- **State management at scale**: Using Context API for complex authentication and session persistence
+- **Mobile-first design**: Building responsive layouts with React Native
+- **Database design**: Modeling relationships for a two-sided marketplace (users, bookings, reviews)
+- **Real-time features**: Implementing job tracking and notification systems
+
+
+  ## 📱 Screenshots
+
+<img width="371" height="794" alt="image" src="https://github.com/user-attachments/assets/32881a9a-f795-4536-9059-8e3861b83609" />
+<img width="369" height="783" alt="image" src="https://github.com/user-attachments/assets/da08d6f9-a3cd-4191-aeb4-eae3bda00413" />
+<img width="368" height="795" alt="image" src="https://github.com/user-attachments/assets/cc49c592-f1c4-4c3a-883c-e8a3deb5c305" />
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Expo CLI
+- Supabase account
+
+### Installation
+```bash
+git clone https://github.com/gabemaldito/Hygi-cleaning-service.git
+cd higimac
+npm install
+npx expo start
+```
+
+### Development
+```bash
+# iOS
+i
+
+# Android  
+a
+```
+
+### Build for Production
+```bash
+eas build --platform all
+```
+
+
+## 🔧 Technical Challenges & Solutions
+
+### Challenge 1: Dual-Role Navigation
+**Problem**: Same app, two completely different user flows (Client vs Professional)
+**Solution**: Used Expo Router's group-based routing with conditional rendering based on user role stored in AuthContext
+
+### Challenge 2: Real-time Job Updates
+**Problem**: Professionals need instant notifications when new jobs are available
+**Solution**: Implemented polling + Supabase realtime subscriptions with efficient query caching
+
+### Challenge 3: State Persistence Across App Restart
+**Problem**: User session was lost when app closed
+**Solution**: AsyncStorage + Context API hydration on app startup
+
+
+
+
+## 📚 Lessons Learned
+
+If I were to rebuild this project today, I would:
+- Use **Redux Toolkit** instead of Context API for more predictable state management
+- Implement **React Query** for better server state management
+- Add **E2E testing** with Detox or Appium
+- Structure components with **Compound Components pattern** for better composition
+- Use **TypeScript stricter mode** (noUncheckedIndexedAccess, etc.)
+
